@@ -1,15 +1,31 @@
 ---
 import { Button } from '@/components/ui/button';
 import '../styles/global.css';
-import Main from '@/layouts/main.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
+import Seo from '@/layouts/Seo.astro';
+import { SITE_CONSTANTS } from '@/constants/site.constant';
 // Component Imports
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": SITE_CONSTANTS.SITENAME,
+  "url": SITE_CONSTANTS.URL,
+  "logo": SITE_CONSTANTS.IMAGE,
+  "creator": {
+	"@type": "Person",
+      "name": SITE_CONSTANTS.SITENAME,
+      "jobTitle": "Fashion & Clothing"
+  }
+};
 ---
 
-<Main content={{title: "Astro"}}>
+<MainLayout content={{title: "Astro"}}>
+	<Seo slot="head" title="Astro" description="Astro" isHome={true} schema={schema} />
 	<div class="grid place-items-center h-screen content-center">
 		<Button>Tailwind Button in Astro!</Button>
 	</div>
-</Main>
+</MainLayout>
