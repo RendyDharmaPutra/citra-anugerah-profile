@@ -1,0 +1,85 @@
+---
+import { SITE_CONSTANTS } from '@/constants/site.constant';
+
+/**
+ * Komponen HeadSEO untuk optimasi SEO di Astro
+ *
+ * Props:
+ * - title: Judul halaman
+ * - description: Deskripsi singkat halaman
+ * - image: URL gambar (untuk OG & Twitter)
+ * - url: URL halaman (canonical & OG)
+ * - type: Tipe konten (website, article, profile, dsb)
+ * - schema: (opsional) JSON-LD schema object
+ */
+
+ type OGType =
+  | "website"
+  | "article"
+  | "profile"
+  | "product"
+  | "video.other"
+  | "event";
+
+ export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  url?: string;
+  siteName?: string;
+  type?: OGType;
+  schema?: Record<string, any>;
+  isHome?: boolean
+}
+
+const {
+  title,
+  description,
+  image = "/favicon.svg", // ! TODO: CHANGE TO BRAND LOGO
+  url = Astro.site ? Astro.site.href : SITE_CONSTANTS.URL,
+  siteName = SITE_CONSTANTS.SITENAME,
+  type = "website",
+  schema = null,
+  isHome = false
+} = Astro.props;
+
+// Title SEO (untuk <title>)
+    const seoTitle = isHome ? `${siteName} | Sustainable Fashion for a Greener Tomorrow` : `${title} | ${siteName}`;
+
+// Title OG (lebih human-friendly)
+const ogTitle = isHome
+  ? `${siteName} – Sustainable Fashion for a Greener Tomorrow`
+  : `${title} – ${siteName}`;
+---
+
+
+
+<!-- Title -->
+<title>{seoTitle}</title>
+
+<!-- Canonical -->
+<link rel="canonical" href={url} />
+
+<!-- Description -->
+<meta name="description" content={description} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={url} />
+<meta property="og:image" content={image} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={ogTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
+
+<!-- Structured Data (Schema.org) -->
+{schema && (
+<script type="application/ld+json">
+    {JSON.stringify(schema)}
+</script>
+)}
