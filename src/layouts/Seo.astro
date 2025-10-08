@@ -35,7 +35,7 @@ import { SITE_CONSTANTS } from '@/constants/site.constant';
 const {
   title,
   description,
-  image = "/favicon.svg", // ! TODO: CHANGE TO BRAND LOGO
+  image = SITE_CONSTANTS.IMAGE, 
   url = Astro.site ? Astro.site.href : SITE_CONSTANTS.URL,
   siteName = SITE_CONSTANTS.SITENAME,
   type = "website",
