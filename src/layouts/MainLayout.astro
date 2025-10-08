@@ -1,15 +1,17 @@
 ---
-import '../styles/global.css';
+import Header from "@/components/layouts/header/Header.astro";
+import "../styles/global.css";
 ---
 
 <html lang="id">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<slot name="head" />
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <slot name="head" />
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
 </html>

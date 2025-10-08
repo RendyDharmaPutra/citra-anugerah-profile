@@ -1,0 +1,22 @@
+---
+import { Button } from "@/components/ui/button";
+import { SITE_CONSTANTS } from "@/constants/site.constant";
+import { Phone } from "lucide-react";
+import DesktopNav from "./navigation/DesktopNav.astro";
+---
+
+<header class="border-b border-border bg-card sticky top-0 z-30">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="/" class="font-semibold tracking-wide text-balance">
+      {SITE_CONSTANTS.SITENAME}
+    </a>
+
+    <DesktopNav />
+
+    <Button className="bg-primary text-primary-foreground space-x-1">
+      <a href={"waHref"} target="_blank" rel="noopener noreferrer">
+        Hubungi via WhatsApp
+      </a>
+    </Button>
+  </div>
+</header>
