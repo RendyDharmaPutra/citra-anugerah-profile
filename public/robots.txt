@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://citra-anugerah.vercel.app/sitemap.xml
