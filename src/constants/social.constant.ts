@@ -7,16 +7,7 @@
  * @property {string} whatsapp - Link to WhatsApp profile.
  */
 export const SOCIAL_MEDIA = Object.freeze({
-  instagram: {
-    name: "Instagram",
-    href: "https://www.instagram.com/citraanugerah/",
-  },
-  facebook: {
-    name: "Facebook",
-    href: "https://www.facebook.com/citraanugerah/",
-  },
-  whatsapp: {
-    name: "WhatsApp",
-    href: "https://wa.me/6285151555555",
-  },
+  instagram: "https://www.instagram.com/citraanugerah/",
+  facebook: "https://www.facebook.com/citraanugerah/",
+  whatsapp: "https://wa.me/6285151555555",
 } as const);
