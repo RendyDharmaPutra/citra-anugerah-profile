@@ -14,7 +14,7 @@ const isActive = currentPath === href;
 <a
   href={href}
   aria-current={isActive ? "page" : undefined}
-  class={`text-sm hover:underline underline-offset-4 transition-all duration-300 ${isActive ? "text-foreground border-b-2 border-primary pb-1" : "text-muted-foreground"}`}
+  class={`pb-1 text-sm border-b-2 animate ${isActive ? "font-medium text-primary border-primary" : "hover:border-primary text-muted-foreground hover:text-primary border-transparent"}`}
 >
   {label}
 </a>
