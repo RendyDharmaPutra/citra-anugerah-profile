@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  href: string;
+}
+
+const { title, href } = Astro.props;
+---
+
+<a
+  aria-label={title}
+  class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:text-foreground hover:bg-muted transition"
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <slot />
+  <span class="sr-only">{title}</span>
+</a>

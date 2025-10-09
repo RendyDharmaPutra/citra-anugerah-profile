@@ -131,3 +131,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .animate {
+    @apply transition-all duration-300;
+  }
+}

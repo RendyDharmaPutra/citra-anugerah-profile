@@ -1,0 +1,19 @@
+---
+import { SITE_CONSTANTS } from "@/constants/site.constant";
+import DesktopNav from "./navigation/DesktopNav.astro";
+import { WhatsAppCTA } from "@/components/buttons/WhatsAppCTA";
+---
+
+<header class="border-b border-border bg-card sticky top-0 z-30">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="/" class="font-semibold tracking-wide text-balance">
+      {SITE_CONSTANTS.SITENAME}
+    </a>
+
+    <section class="flex items-center gap-6">
+      <DesktopNav />
+
+      <WhatsAppCTA />
+    </section>
+  </div>
+</header>

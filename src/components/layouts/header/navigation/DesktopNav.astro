@@ -1,0 +1,8 @@
+---
+import NavItem from "./NavItem.astro";
+import { NAVIGATION } from "@/constants/navigation.constant";
+---
+
+<nav class="hidden gap-6 md:flex">
+  {NAVIGATION.map((item) => <NavItem href={item.path} label={item.name} />)}
+</nav>
