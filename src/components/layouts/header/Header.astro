@@ -2,6 +2,9 @@
 import { SITE_CONSTANTS } from "@/constants/site.constant";
 import DesktopNav from "./navigation/DesktopNav.astro";
 import { WhatsAppCTA } from "@/components/buttons/WhatsAppCTA";
+import { MobileNav } from "./navigation/MobileNav";
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="border-b border-border bg-card sticky top-0 z-30">
@@ -10,10 +13,12 @@ import { WhatsAppCTA } from "@/components/buttons/WhatsAppCTA";
       {SITE_CONSTANTS.SITENAME}
     </a>
 
-    <section class="flex items-center gap-6">
+    <section class="hidden md:flex items-center gap-6">
       <DesktopNav />
 
       <WhatsAppCTA />
     </section>
+
+    <MobileNav client:load currentPath={currentPath} />
   </div>
 </header>
