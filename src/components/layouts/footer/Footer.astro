@@ -1,0 +1,29 @@
+---
+import { Instagram, MessageCircle, Facebook } from "lucide-react";
+import { SOCIAL_MEDIA } from "@/constants/social.constant";
+import { SITE_CONSTANTS } from "@/constants/site.constant";
+import SocialMediaItem from "./SocialMediaItem.astro";
+---
+
+<footer class="border-t border-border bg-card">
+  <div class="mx-auto max-w-6xl px-4 py-6">
+    <div
+      class="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center"
+    >
+      <p class="text-sm">
+        © 2025 {SITE_CONSTANTS.SITENAME}. Karya alam, dibuat dengan cinta.
+      </p>
+      <div class="flex items-center gap-2">
+        <SocialMediaItem title="Instagram" href={SOCIAL_MEDIA.instagram.href}>
+          <Instagram className="h-4 w-4" aria-hidden="true" />
+        </SocialMediaItem>
+        <SocialMediaItem title="WhatsApp" href={SOCIAL_MEDIA.whatsapp.href}>
+          <MessageCircle className="h-4 w-4" aria-hidden="true" />
+        </SocialMediaItem>
+        <SocialMediaItem title="Facebook" href={SOCIAL_MEDIA.facebook.href}>
+          <Facebook className="h-4 w-4" aria-hidden="true" />
+        </SocialMediaItem>
+      </div>
+    </div>
+  </div>
+</footer>
