@@ -1,27 +1,40 @@
-type navigationItem = {
+/**
+ * Type for navigation item.
+ *
+ * @property {string} name - The name of the navigation item.
+ * @property {string} path - The path of the navigation item.
+ */
+type NavigationItem = {
   name: string;
   path: string;
 };
 
-export const NAVIGATION: readonly navigationItem[] = Object.freeze([
+/**
+ * An array of navigation item.
+ *
+ * @constant
+ * @readonly
+ * @property {NavigationItem[]} items - An array of navigation item.
+ */
+export const NAVIGATION: readonly NavigationItem[] = Object.freeze([
   {
-    name: "Beranda",
+    name: "Home",
     path: "/",
   },
   {
-    name: "Produk",
+    name: "Product",
     path: "/products",
   },
   {
-    name: "Pelatihan",
+    name: "Training",
     path: "/training",
   },
   {
-    name: "Tentang Kami",
+    name: "About Me",
     path: "/about",
   },
   {
-    name: "Kontak",
+    name: "Contact",
     path: "/contact",
   },
 ] as const);
