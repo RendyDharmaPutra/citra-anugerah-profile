@@ -8,6 +8,6 @@
  */
 export const SOCIAL_MEDIA = Object.freeze({
   instagram: "https://www.instagram.com/citraanugerah/",
-  facebook: "https://www.facebook.com/citraanugerah/",
-  whatsapp: "https://wa.me/6285151555555",
+  facebook: "https://www.facebook.com/Citra Anugerah/",
+  whatsapp: "https://wa.me/6281233303635",
 } as const);
