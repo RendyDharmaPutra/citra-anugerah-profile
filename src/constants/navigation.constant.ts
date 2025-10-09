@@ -4,7 +4,7 @@
  * @property {string} name - The name of the navigation item.
  * @property {string} path - The path of the navigation item.
  */
-type NavigationItem = {
+export type NavigationItem = {
   name: string;
   path: string;
 };
