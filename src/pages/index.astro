@@ -4,6 +4,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
 import Hero from "@/features/home/components/Hero.astro";
+import EcoprintIntro from "@/features/home/components/EcoprintIntro.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -30,5 +31,6 @@ const schema = {
   />
   <div class="space-y-16 md:space-y-20">
     <Hero />
+    <EcoprintIntro />
   </div>
 </MainLayout>
