@@ -1,0 +1,37 @@
+---
+import ValueCard from "./cards/ValueCard.astro";
+
+const values = [
+  {
+    title: "Ramah Lingkungan",
+    description:
+      "Mengutamakan bahan alami dan proses bertanggung jawab terhadap alam.",
+  },
+  {
+    title: "Motif Unik",
+    description: "Setiap helai kain memiliki karakter dan cerita yang berbeda.",
+  },
+  {
+    title: "Kualitas Pengrajin",
+    description:
+      "Dikerjakan oleh pengrajin berpengalaman dengan standar mutu tinggi.",
+  },
+];
+---
+
+<section class="space-y-4">
+  <h2 class="text-2xl font-semibold md:text-3xl">
+    Mengapa Memilih Ecoprint Kami
+  </h2>
+  <p class="leading-relaxed text-muted-foreground">
+    Nilai yang kami pegang: keberlanjutan, keunikan motif, dan kualitas
+    pengerjaan yang rapi.
+  </p>
+  <div class="grid gap-4 md:grid-cols-3">
+    {
+      values.map((value) => (
+        <ValueCard title={value.title} description={value.description} />
+      ))
+    }
+  </div>
+</section>
