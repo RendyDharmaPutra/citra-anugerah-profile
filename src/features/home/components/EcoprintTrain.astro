@@ -1,0 +1,30 @@
+---
+import { Button } from "@/components/ui/button";
+---
+
+<section class="grid gap-6 md:grid-cols-2 md:gap-10">
+  <div class="flex flex-col justify-center gap-3">
+    <h2 class="text-2xl font-semibold md:text-3xl">
+      Belajar Membuat Ecoprint Sendiri
+    </h2>
+    <p class="leading-relaxed text-muted-foreground">
+      Kami membuka pelatihan ecoprint bagi siapa pun yang ingin mengenal dan
+      membuat karyanya sendiri. Kelas bersifat praktik langsung dengan
+      pendampingan pengrajin berpengalaman.
+    </p>
+    <div>
+      <a href="/training">
+        <Button className="bg-primary text-primary-foreground">
+          Lihat Info Pelatihan
+        </Button>
+      </a>
+    </div>
+  </div>
+  <div class="overflow-hidden rounded-xl border border-border">
+    <img
+      src="/assets/images/workshop-ecoprint-praktek-langsung.jpg"
+      alt="Suasana pelatihan ecoprint: praktik langsung dan pendampingan"
+      class="h-full w-full object-cover"
+    />
+  </div>
+</section>
