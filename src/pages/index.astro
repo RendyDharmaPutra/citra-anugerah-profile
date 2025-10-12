@@ -1,9 +1,9 @@
 ---
-import { Button } from "@/components/ui/button";
 import "../styles/global.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
+import Hero from "@/features/home/components/hero.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -28,7 +28,7 @@ const schema = {
     isHome={true}
     schema={schema}
   />
-  <div class="grid place-items-center h-screen content-center">
-    <Button>Tailwind Button in Astro!</Button>
+  <div class="space-y-16 md:space-y-20">
+    <Hero />
   </div>
 </MainLayout>
