@@ -1,0 +1,31 @@
+---
+import { Button } from "@/components/ui/button";
+import { SOCIAL_MEDIA } from "@/constants/social.constant";
+---
+
+<section
+  id="home-closing"
+  class="rounded-xl border border-border bg-secondary p-6 md:p-8"
+>
+  <div class="grid gap-4 md:grid-cols-2 md:items-center">
+    <div>
+      <h3 class="text-pretty text-xl font-semibold md:text-2xl">
+        Yuk, dukung karya lokal yang ramah lingkungan.
+      </h3>
+      <p class="mt-2 leading-relaxed text-muted-foreground">
+        Pesan produk ecoprint atau daftar pelatihan—kami siap membantu.
+      </p>
+    </div>
+    <div class="md:justify-self-end">
+      <Button className="bg-primary text-primary-foreground">
+        <a
+          href={SOCIAL_MEDIA.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hubungi Kami via WhatsApp
+        </a>
+      </Button>
+    </div>
+  </div>
+</section>
