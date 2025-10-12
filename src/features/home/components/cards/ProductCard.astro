@@ -1,0 +1,21 @@
+---
+import { Card } from "@/components/ui/card";
+import { SITE_CONSTANTS } from "@/constants/site.constant";
+
+interface Props {
+  name: string;
+  imageUrl: string;
+}
+
+const { name, imageUrl } = Astro.props;
+---
+
+<Card className="overflow-hidden">
+  <div class="aspect-[4/3] w-full">
+    <img
+      src={imageUrl}
+      alt={`${name} ecoprint ${SITE_CONSTANTS.SITENAME}`}
+      class="h-full w-full object-cover"
+    />
+  </div>
+</Card>

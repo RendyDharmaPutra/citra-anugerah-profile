@@ -1,0 +1,46 @@
+---
+import { Button } from "@/components/ui/button";
+import ProductCard from "./cards/ProductCard.astro";
+
+const featuredCategories = [
+  {
+    name: "Baju",
+    imageUrl: "https://picsum.photos/id/1015/300/200",
+  },
+  {
+    name: "Topi",
+    imageUrl: "https://picsum.photos/id/1016/300/200",
+  },
+  {
+    name: "Tas",
+    imageUrl: "https://picsum.photos/id/1017/300/200",
+  },
+  {
+    name: "Selendang",
+    imageUrl: "https://picsum.photos/id/1018/300/200",
+  },
+];
+---
+
+<section class="space-y-6">
+  <div class="flex items-center justify-between">
+    <h2 class="text-2xl font-semibold md:text-3xl">
+      Karya Terbaik per Kategori
+    </h2>
+    <a href="/produk">
+      <Button
+        variant="outline"
+        className="border-primary text-primary bg-transparent"
+      >
+        Lihat Semua Produk
+      </Button>
+    </a>
+  </div>
+  <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+    {
+      featuredCategories.map((c) => (
+        <ProductCard name={c.name} imageUrl={c.imageUrl} />
+      ))
+    }
+  </div>
+</section>
