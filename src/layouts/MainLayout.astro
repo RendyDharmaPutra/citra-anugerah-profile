@@ -13,7 +13,9 @@ import Footer from "@/components/layouts/footer/Footer.astro";
   </head>
   <body>
     <Header />
-    <slot />
+    <main class="mx-auto max-w-6xl px-4 py-8 md:py-10 min-h-screen">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

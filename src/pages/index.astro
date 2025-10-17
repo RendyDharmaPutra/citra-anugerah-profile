@@ -1,13 +1,14 @@
 ---
-import { Button } from "@/components/ui/button";
 import "../styles/global.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
-// Component Imports
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import Hero from "@/features/home/components/Hero.astro";
+import EcoprintIntro from "@/features/home/components/EcoprintIntro.astro";
+import ValuePropose from "@/features/home/components/ValuePropose.astro";
+import TopProduct from "@/features/home/components/TopProduct.astro";
+import EcoprintTrain from "@/features/home/components/EcoprintTrain.astro";
+import HomeCTA from "@/features/home/components/HomeCTA.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -23,15 +24,21 @@ const schema = {
 };
 ---
 
-<MainLayout content={{ title: "Astro" }}>
+<MainLayout>
+  <!-- TODO: Change description -->
   <Seo
     slot="head"
-    title="Astro"
-    description="Astro"
+    title="Citra Anugerah"
+    description="Citra Anugerah"
     isHome={true}
     schema={schema}
   />
-  <div class="grid place-items-center h-screen content-center">
-    <Button>Tailwind Button in Astro!</Button>
+  <div class="space-y-16 md:space-y-20">
+    <Hero />
+    <EcoprintIntro />
+    <ValuePropose />
+    <TopProduct />
+    <EcoprintTrain />
+    <HomeCTA />
   </div>
 </MainLayout>
