@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { env } from "@/config/env";
 
 type ProductCardProps = {
   category: string;
@@ -10,7 +11,7 @@ export const ProductCard = ({ image, category }: ProductCardProps) => {
     <Card className="relative overflow-hidden">
       <div className="aspect-[4/3] w-full">
         <img
-          src={image}
+          src={`${env.API_BASE_URL}${image}`}
           alt="Produk ecoprint"
           className="h-full w-full object-cover"
         />

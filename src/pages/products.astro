@@ -34,6 +34,6 @@ const data = await readProductsService();
   />
   <div class="space-y-6">
     <ProductHeadline />
-    <ProductContentSection client:load />
+    <ProductContentSection client:load products={data} />
   </div>
 </MainLayout>

@@ -1,21 +1,13 @@
 import { ProductCard } from "./ProductCard";
+import type { ProductType } from "@/types/models/product-type";
 
-export const ProductGallery = () => {
-  const products = [
-    { image: "https://picsum.photos/200", category: "pakaian" },
-    { image: "https://picsum.photos/201", category: "aksesoris" },
-    { image: "https://picsum.photos/202", category: "kain" },
-    { image: "https://picsum.photos/203", category: "topi" },
-    { image: "https://picsum.photos/204", category: "pakaian" },
-    { image: "https://picsum.photos/205", category: "pakaian" },
-  ];
-
+export const ProductGallery = ({ products }: { products: ProductType[] }) => {
   return (
     <section className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
       {products.map((product, index) => (
         <ProductCard
           key={index}
-          image={product.image}
+          image={product.image.formats.medium.url}
           category={product.category}
         />
       ))}
