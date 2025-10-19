@@ -4,7 +4,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
 import ProductHeadline from "@/features/products/components/ProductHeadline.astro";
-import { ProductFilterSection } from "@/features/products/components/filter/FilterSection";
+import { ProductContentSection } from "@/features/products/components/ContentSection";
 
 const schema = {
   "@context": "https://schema.org",
@@ -31,6 +31,6 @@ const schema = {
   />
   <div class="space-y-6">
     <ProductHeadline />
-    <ProductFilterSection client:load />
+    <ProductContentSection client:load />
   </div>
 </MainLayout>
