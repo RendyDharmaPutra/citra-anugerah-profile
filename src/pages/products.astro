@@ -3,6 +3,7 @@ import "../styles/global.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
+import ProductHeadline from "@/features/products/components/ProductHeadline.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -27,5 +28,7 @@ const schema = {
     type="product"
     schema={schema}
   />
-  <div class="space-y-6"></div>
+  <div class="space-y-6">
+    <ProductHeadline />
+  </div>
 </MainLayout>
