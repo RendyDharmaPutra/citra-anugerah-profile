@@ -1,24 +1,24 @@
-// import { ProductCard } from "../ProductCard";
+import { ProductCard } from "./ProductCard";
 
 export const ProductGallery = () => {
+  const products = [
+    { image: "https://picsum.photos/200", category: "pakaian" },
+    { image: "https://picsum.photos/201", category: "aksesoris" },
+    { image: "https://picsum.photos/202", category: "kain" },
+    { image: "https://picsum.photos/203", category: "topi" },
+    { image: "https://picsum.photos/204", category: "pakaian" },
+    { image: "https://picsum.photos/205", category: "pakaian" },
+  ];
+
   return (
     <section className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-      {/* {filteredProducts.map((p) => (
+      {products.map((product, index) => (
         <ProductCard
-          key={p.name}
-          name={p.name}
-          category={p.category}
-          imageUrl={p.imageUrl}
-          imageAlt={`Produk ecoprint ${p.name}`}
-          badgePosition="left"
+          key={index}
+          image={product.image}
+          category={product.category}
         />
-      ))} */}
-      <div className="h-48 bg-gray-200" />
-      <div className="h-48 bg-gray-300" />
-      <div className="h-48 bg-gray-400" />
-      <div className="h-48 bg-gray-500" />
-      <div className="h-48 bg-gray-600" />
-      <div className="h-48 bg-gray-700" />
+      ))}
     </section>
   );
 };
