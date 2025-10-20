@@ -1,8 +1,8 @@
 export enum ProductCategory {
-  all = "all",
-  clothing = "pakaian",
-  accessories = "aksesoris",
-  bag = "tas",
-  shoe = "sepatu",
-  fabric = "kain",
+  all = "Semua",
+  clothing = "Pakaian",
+  accessories = "Aksesoris",
+  bag = "Tas",
+  shoe = "Sepatu",
+  fabric = "Kain",
 }

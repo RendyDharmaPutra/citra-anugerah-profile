@@ -2,14 +2,18 @@ import { useMemo } from "react";
 import { useProductCategory } from "../../context/ProductCategoryContext";
 import { ProductCard } from "./ProductCard";
 import type { ProductType } from "@/types/models/product-type";
+import { ProductCategory } from "@/constants/enum/product-category.enum";
 
 export const ProductGallery = ({ products }: { products: ProductType[] }) => {
   const { activeCategory } = useProductCategory();
 
   const filteredProducts = useMemo(() => {
-    return activeCategory === "all"
+    return activeCategory === ProductCategory.all
       ? products
-      : products.filter((product) => product.category === activeCategory);
+      : products.filter(
+          (product) =>
+            product.category.toLowerCase() === activeCategory.toLowerCase(),
+        );
   }, [activeCategory, products]);
 
   return (
