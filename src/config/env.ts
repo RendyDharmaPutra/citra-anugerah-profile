@@ -7,5 +7,6 @@ function getEnvVar(name: string): string {
 }
 
 export const env = {
-  API_BASE_URL: getEnvVar("API_BASE_URL"),
+  API_BASE_URL: getEnvVar("PUBLIC_API_BASE_URL"),
+  STRAPI_TOKEN: getEnvVar("PUBLIC_STRAPI_TOKEN"),
 };

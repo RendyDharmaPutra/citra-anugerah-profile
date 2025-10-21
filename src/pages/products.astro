@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+import MainLayout from "@/layouts/MainLayout.astro";
+import Seo from "@/layouts/Seo.astro";
+import { SITE_CONSTANTS } from "@/constants/site.constant";
+import ProductHeadline from "@/features/products/components/ProductHeadline.astro";
+import { ProductContentSection } from "@/features/products/components/ContentSection";
+import { readProductsService } from "@/features/products/services/readProducts";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_CONSTANTS.SITENAME,
+  url: SITE_CONSTANTS.URL,
+  logo: SITE_CONSTANTS.IMAGE,
+  creator: {
+    "@type": "Person",
+    name: SITE_CONSTANTS.SITENAME,
+    jobTitle: "Fashion & Clothing",
+  },
+};
+
+const data = await readProductsService();
+---
+
+<MainLayout>
+  <!-- TODO: Change description -->
+  <Seo
+    slot="head"
+    title="Katalog Produk"
+    description="Citra Anugerah"
+    type="product"
+    schema={schema}
+  />
+  <div class="space-y-6">
+    <ProductHeadline />
+    <ProductContentSection client:load products={data} />
+  </div>
+</MainLayout>
