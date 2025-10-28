@@ -1,0 +1,56 @@
+---
+const offerings = [
+  {
+    title: "Pengenalan Teknik ECOPRINT",
+    description:
+      "Pelajari dasar-dasar pewarnaan alami dan proses ecoprint dari pengrajin berpengalaman.",
+  },
+  {
+    title: "Praktik Langsung Pembuatan Kain",
+    description:
+      "Praktik membuat kain dengan pewarna alami dari daun, bunga, dan bahan organik lainnya.",
+  },
+  {
+    title: "Hasil Karya Dapat Dibawa Pulang",
+    description:
+      "Setiap peserta membawa pulang karya ecoprint yang telah dibuat selama pelatihan.",
+  },
+  {
+    title: "Pendampingan Pengrajin Berpengalaman",
+    description:
+      "Belajar langsung dari pengrajin profesional dengan pengalaman bertahun-tahun.",
+  },
+  {
+    title: "Cocok untuk Berbagai Kelompok",
+    description:
+      "Pelatihan dapat disesuaikan untuk sekolah, komunitas, instansi, dan kelompok UMKM.",
+  },
+  {
+    title: "Edukasi Keberlanjutan Lingkungan",
+    description:
+      "Pahami pentingnya pewarnaan alami dan dampak positifnya terhadap lingkungan.",
+  },
+];
+---
+
+<section class="space-y-6">
+  <div class="space-y-2">
+    <h2 class="text-2xl font-semibold md:text-3xl">Apa yang Kami Tawarkan</h2>
+    <p class="text-muted-foreground">
+      Pelatihan kami dirancang untuk memberikan pengalaman belajar yang mendalam
+      dan menyenangkan.
+    </p>
+  </div>
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    {
+      offerings.map((offering) => (
+        <div class="space-y-2 rounded-lg border border-border bg-card p-4">
+          <h3 class="font-semibold text-foreground">{offering.title}</h3>
+          <p class="text-sm leading-relaxed text-muted-foreground">
+            {offering.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>

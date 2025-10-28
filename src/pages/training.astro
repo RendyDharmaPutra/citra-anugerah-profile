@@ -4,6 +4,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
 import Hero from "@/features/training/components/Hero.astro";
+import Offer from "@/features/training/components/Offer.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -30,5 +31,6 @@ const schema = {
   />
   <div class="space-y-12">
     <Hero />
+    <Offer />
   </div>
 </MainLayout>
