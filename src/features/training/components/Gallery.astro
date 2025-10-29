@@ -1,21 +1,8 @@
 ---
+import { readTrainingsService } from "../services/readTrainings";
 import TrainingCard from "./TrainingCard.astro";
 
-// TODO: DUMMY DATA
-const trainingSessions = [
-  {
-    image: "https://picsum.photos/640/480",
-    title: "Pelatihan Ecoprint di SMK Negeri 5 Bandung",
-  },
-  {
-    image: "https://picsum.photos/640/480",
-    title: "Workshop Pembuatan Tas Ecoprint – Komunitas UMKM Cirebon",
-  },
-  {
-    image: "https://picsum.photos/640/480",
-    title: "Pelatihan Ecoprint untuk Guru Seni – Yogyakarta",
-  },
-];
+const data = await readTrainingsService();
 ---
 
 <section id="dokumentasi" class="space-y-6">
@@ -28,9 +15,13 @@ const trainingSessions = [
   </div>
   <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
     {
-      trainingSessions.map((session) => (
-        <TrainingCard image={session.image} title={session.title} />
-      ))
+      data &&
+        data.map((training) => (
+          <TrainingCard
+            image={training.image.formats.medium.url}
+            title={training.title}
+          />
+        ))
     }
   </div>
 </section>
