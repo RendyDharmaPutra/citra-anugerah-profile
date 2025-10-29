@@ -1,0 +1,19 @@
+---
+import { Card } from "@/components/ui/card";
+
+interface Props {
+  image: string;
+  title: string;
+}
+
+const { image, title } = Astro.props;
+---
+
+<Card className="overflow-hidden border-border bg-card">
+  <div class="aspect-video overflow-hidden">
+    <img src={image} alt={title} class="h-full w-full object-cover" />
+  </div>
+  <div class="p-4">
+    <h3 class="font-semibold text-foreground">{title}</h3>
+  </div>
+</Card>

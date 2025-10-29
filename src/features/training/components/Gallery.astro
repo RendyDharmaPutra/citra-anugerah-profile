@@ -1,0 +1,36 @@
+---
+import TrainingCard from "./TrainingCard.astro";
+
+// TODO: DUMMY DATA
+const trainingSessions = [
+  {
+    image: "https://picsum.photos/640/480",
+    title: "Pelatihan Ecoprint di SMK Negeri 5 Bandung",
+  },
+  {
+    image: "https://picsum.photos/640/480",
+    title: "Workshop Pembuatan Tas Ecoprint – Komunitas UMKM Cirebon",
+  },
+  {
+    image: "https://picsum.photos/640/480",
+    title: "Pelatihan Ecoprint untuk Guru Seni – Yogyakarta",
+  },
+];
+---
+
+<section id="dokumentasi" class="space-y-6">
+  <div class="space-y-2">
+    <h2 class="text-2xl font-semibold md:text-3xl">Dokumentasi Pelatihan</h2>
+    <p class="text-muted-foreground">
+      Lihat kegiatan pelatihan yang telah kami selenggarakan di berbagai lokasi
+      dan institusi.
+    </p>
+  </div>
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {
+      trainingSessions.map((session) => (
+        <TrainingCard image={session.image} title={session.title} />
+      ))
+    }
+  </div>
+</section>
