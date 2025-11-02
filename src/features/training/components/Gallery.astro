@@ -1,0 +1,27 @@
+---
+import { readTrainingsService } from "../services/readTrainings";
+import TrainingCard from "./TrainingCard.astro";
+
+const data = await readTrainingsService();
+---
+
+<section id="dokumentasi" class="space-y-6">
+  <div class="space-y-2">
+    <h2 class="text-2xl font-semibold md:text-3xl">Dokumentasi Pelatihan</h2>
+    <p class="text-muted-foreground">
+      Lihat kegiatan pelatihan yang telah kami selenggarakan di berbagai lokasi
+      dan institusi.
+    </p>
+  </div>
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {
+      data &&
+        data.map((training) => (
+          <TrainingCard
+            image={training.image.formats.medium.url}
+            title={training.title}
+          />
+        ))
+    }
+  </div>
+</section>

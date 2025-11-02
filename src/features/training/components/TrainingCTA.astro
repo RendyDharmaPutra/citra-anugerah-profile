@@ -1,0 +1,30 @@
+---
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { Button } from "@/components/ui/button";
+import { SOCIAL_MEDIA } from "@/constants/social.constant";
+---
+
+<section
+  class="space-y-4 rounded-lg border border-border bg-card p-8 text-center md:p-12"
+>
+  <h2 class="text-2xl font-semibold md:text-3xl">
+    Ingin Mengadakan Pelatihan Ecoprint?
+  </h2>
+  <p class="mx-auto max-w-2xl leading-relaxed text-muted-foreground">
+    Hubungi kami untuk informasi lebih lanjut dan pemesanan pelatihan eksklusif
+    di sekolah, komunitas, atau instansi Anda.
+  </p>
+  <div class="flex flex-col gap-3 sm:flex-row sm:justify-center">
+    <a
+      href={SOCIAL_MEDIA.whatsapp}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2"
+    >
+      <Button className="bg-primary text-primary-foreground">
+        <WhatsAppIcon color="white" />
+        Pesan Sekarang
+      </Button>
+    </a>
+  </div>
+</section>
