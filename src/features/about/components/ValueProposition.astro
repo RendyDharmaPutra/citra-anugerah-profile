@@ -1,0 +1,46 @@
+---
+import ValueCard from "./ValueCard.astro";
+
+const values = [
+  {
+    icon: "🌿",
+    title: "Ramah Lingkungan",
+    description:
+      "Semua bahan pewarna diambil dari sumber alami, meminimalkan limbah dan menjaga ekosistem.",
+  },
+  {
+    icon: "🧵",
+    title: "Karya Handmade",
+    description:
+      "Setiap produk dibuat satu per satu dengan tangan, penuh perhatian dan dedikasi.",
+  },
+  {
+    icon: "💚",
+    title: "Keunikan Setiap Motif",
+    description:
+      "Tidak ada dua hasil ecoprint yang sama—setiap kain memiliki cerita alam yang berbeda.",
+  },
+  {
+    icon: "🤝",
+    title: "Kolaboratif",
+    description:
+      "Kami percaya pengetahuan harus dibagikan, membuka kesempatan kerja sama dengan komunitas.",
+  },
+];
+---
+
+<section class="mx-auto w-full py-12 md:py-16">
+  <div class="space-y-8">
+    <div>
+      <h2 class="text-balance text-3xl font-semibold md:text-4xl">
+        Nilai & Filosofi Kami
+      </h2>
+      <p class="mt-2 text-muted-foreground">
+        Prinsip yang memandu setiap langkah kami
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      {values.map((value) => <ValueCard {...value} />)}
+    </div>
+  </div>
+</section>
