@@ -3,7 +3,10 @@ import "../styles/global.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
-import Hero from "@/features/contacts/components/Hero.astro";
+import Hero from "@/features/about/components/Hero.astro";
+import Story from "@/features/about/components/Story.astro";
+import ValueProposition from "@/features/about/components/ValueProposition.astro";
+import Mission from "@/features/about/components/Mission.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -30,5 +33,8 @@ const schema = {
   />
   <div>
     <Hero />
+    <Story />
+    <ValueProposition />
+    <Mission />
   </div>
 </MainLayout>
