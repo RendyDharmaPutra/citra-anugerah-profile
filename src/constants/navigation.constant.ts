@@ -34,7 +34,7 @@ export const NAVIGATION: readonly NavigationItem[] = Object.freeze([
     path: "/about",
   },
   {
-    name: "Contact",
-    path: "/contact",
+    name: "Contacts",
+    path: "/contacts",
   },
 ] as const);
