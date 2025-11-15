@@ -5,6 +5,7 @@ import Seo from "@/layouts/Seo.astro";
 import { SITE_CONSTANTS } from "@/constants/site.constant";
 import Hero from "@/features/contacts/components/Hero.astro";
 import ContactsGrid from "@/features/contacts/components/ContactsGrid.astro";
+import Location from "@/features/contacts/components/Location.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -32,5 +33,6 @@ const schema = {
   <div>
     <Hero />
     <ContactsGrid />
+    <Location />
   </div>
 </MainLayout>
