@@ -1,0 +1,23 @@
+---
+import { Button } from "@/components/ui/button";
+import { SOCIAL_MEDIA } from "@/constants/social.constant";
+---
+
+<section
+  class="mx-auto px-4 py-12 w-full max-w-4xl text-center rounded-xl border border-border bg-card"
+>
+  <h2 class="text-2xl font-semibold md:text-3xl">
+    Siap Memulai Perjalanan Ecoprint Anda?
+  </h2>
+  <p class="mt-3 text-muted-foreground">
+    Hubungi kami hari ini dan mari ciptakan sesuatu yang indah bersama.
+  </p>
+  <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+    <a href={SOCIAL_MEDIA.whatsapp} target="_blank" rel="noopener noreferrer">
+      <Button size="lg"> Hubungi via WhatsApp </Button>
+    </a>
+    <a href={`mailto:${SOCIAL_MEDIA.email}`}>
+      <Button variant="outline" size="lg"> Kirim Email </Button>
+    </a>
+  </div>
+</section>

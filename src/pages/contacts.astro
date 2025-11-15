@@ -6,6 +6,7 @@ import { SITE_CONSTANTS } from "@/constants/site.constant";
 import Hero from "@/features/contacts/components/Hero.astro";
 import ContactsGrid from "@/features/contacts/components/ContactsGrid.astro";
 import Location from "@/features/contacts/components/Location.astro";
+import ContactsCTA from "@/features/contacts/components/ContactsCTA.astro";
 
 const schema = {
   "@context": "https://schema.org",
@@ -34,5 +35,6 @@ const schema = {
     <Hero />
     <ContactsGrid />
     <Location />
+    <ContactsCTA />
   </div>
 </MainLayout>
