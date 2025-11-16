@@ -1,0 +1,51 @@
+---
+import { SOCIAL_MEDIA } from "@/constants/social.constant";
+import ContactCard from "./ContactCard.astro";
+---
+
+<section class="mx-auto w-full max-w-4xl px-4 pb-16 md:pb-20">
+  <div class="grid gap-6 md:grid-cols-2">
+    <ContactCard
+      icon="💬"
+      title="WhatsApp"
+      description="Hubungi kami untuk pertanyaan cepat, pemesanan produk, atau informasi pelatihan."
+      primaryAction={{
+        label: "Chat Sekarang",
+        href: SOCIAL_MEDIA.whatsapp,
+        target: "_blank",
+      }}
+    />
+
+    <ContactCard
+      icon="📸"
+      title="Instagram"
+      description="Ikuti kami untuk melihat karya terbaru, inspirasi desain, dan update pelatihan."
+      primaryAction={{
+        label: "Kunjungi Instagram",
+        href: SOCIAL_MEDIA.instagram,
+        target: "_blank",
+      }}
+    />
+
+    <ContactCard
+      icon="✉️"
+      title="Email"
+      description="Hubungi kami untuk kebutuhan administrasi, kolaborasi, atau pertanyaan umum."
+      primaryAction={{
+        label: "Kirim Email",
+        href: `mailto:${SOCIAL_MEDIA.email}`,
+      }}
+    />
+
+    <ContactCard
+      icon="📍"
+      title="Lokasi"
+      description="Kunjungi studio kami di Yogyakarta untuk melihat produk secara langsung atau berdiskusi proyek."
+      primaryAction={{
+        label: "Lihat di Google Maps",
+        href: "https://www.google.com/maps/place/Ecoprint+Studio/@-7.795884,110.3675473,17z/data=!3m1!4b1!4m5!3m4!1s0x2e7577921959d897:0x538987278dd999d4!8m2!3d-7.7973847!4d110.369471",
+        target: "_blank",
+      }}
+    />
+  </div>
+</section>
