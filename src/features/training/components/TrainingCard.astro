@@ -10,7 +10,7 @@ interface Props {
 const { image, title } = Astro.props;
 ---
 
-<Card className="overflow-hidden border-border bg-card">
+<Card className="overflow-hidden bg-card p-0 gap-0">
   <div class="aspect-video overflow-hidden">
     <img
       src={`${env.API_BASE_URL}${image}`}
