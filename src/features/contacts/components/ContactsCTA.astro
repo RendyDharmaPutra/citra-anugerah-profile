@@ -1,4 +1,5 @@
 ---
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { Button } from "@/components/ui/button";
 import { SOCIAL_MEDIA } from "@/constants/social.constant";
 ---
@@ -14,7 +15,7 @@ import { SOCIAL_MEDIA } from "@/constants/social.constant";
   </p>
   <div class="mt-6 flex gap-3 flex-row justify-center">
     <a href={SOCIAL_MEDIA.whatsapp} target="_blank" rel="noopener noreferrer">
-      <Button size="lg"> Hubungi Kami </Button>
+      <Button size="lg"> <WhatsAppIcon color="white" /> Hubungi Kami </Button>
     </a>
     <a href={`mailto:${SOCIAL_MEDIA.email}`}>
       <Button variant="outline" size="lg"> Kirim Email </Button>
