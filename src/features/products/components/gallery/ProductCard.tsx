@@ -8,8 +8,8 @@ type ProductCardProps = {
 
 export const ProductCard = ({ image, category }: ProductCardProps) => {
   return (
-    <Card className="relative overflow-hidden">
-      <div className="aspect-[4/3] w-full">
+    <Card className="p-0 relative overflow-hidden rounded-md">
+      <div className=" w-full">
         <img
           src={`${env.API_BASE_URL}${image}`}
           alt="Produk ecoprint"
