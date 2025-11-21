@@ -8,6 +8,10 @@ import Offer from "@/features/training/components/Offer.astro";
 import Gallery from "@/features/training/components/Gallery.astro";
 import TrainingCTA from "@/features/training/components/TrainingCTA.astro";
 
+export const prerender = {
+  expiration: 300,
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "Organization",
