@@ -18,23 +18,23 @@ export type NavigationItem = {
  */
 export const NAVIGATION: readonly NavigationItem[] = Object.freeze([
   {
-    name: "Home",
+    name: "Beranda",
     path: "/",
   },
   {
-    name: "Product",
+    name: "Produk",
     path: "/products",
   },
   {
-    name: "Training",
+    name: "Pelatihan",
     path: "/training",
   },
   {
-    name: "About Me",
+    name: "Tentang Kami",
     path: "/about",
   },
   {
-    name: "Contacts",
+    name: "Kontak",
     path: "/contacts",
   },
 ] as const);
