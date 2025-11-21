@@ -7,7 +7,9 @@ import ProductHeadline from "@/features/products/components/ProductHeadline.astr
 import { ProductContentSection } from "@/features/products/components/ContentSection";
 import { readProductsService } from "@/features/products/services/readProducts";
 
-export const prerender = false;
+export const prerender = {
+  expiration: 300,
+};
 
 const schema = {
   "@context": "https://schema.org",
